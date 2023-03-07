@@ -8,6 +8,15 @@
 #  position   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  team_id    :bigint
+#
+# Indexes
+#
+#  index_players_on_team_id  (team_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (team_id => teams.id)
 #
 require "test_helper"
 

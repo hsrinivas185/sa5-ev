@@ -1,0 +1,10 @@
+<%= bootstrap_form_with model: @player, method: :post, url: team_players_path(@team), data: {turbo: false} do |f| %>
+
+<%= f.text_field :first_name %>
+<%= f.text_field :last_name %>
+<%= f.text_field :position %>
+<%= f.submit %>
+
+<% end %>
+
+<%= link_to 'cancel', team_players_path(@team), class: "btn btn-secondary" %>

@@ -1,0 +1,26 @@
+<table class="table table-striped table-hover ">
+
+<thead class="table-dark">
+    <tr>
+        <td> Player Nmae</td>
+        <td></td>
+        <td></td>
+    </tr>
+</thead>
+
+<tbody>
+  <% @players.each do |p| %>
+    <tr>
+        <td> <%= p.first_name %> <%= p.last_name %></td>
+        <td class="text-wrap">
+           <%= link_to 'show', team_player_path(@team, p) %> |
+           <%= link_to 'edit', edit_team_player_path(@team, p) %> |
+           <%= link_to 'destroy', team_player_path(@team, p), data: { turbo_method: :delete } %>
+        </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+<%= link_to 'New Player', new_team_player_path(@team), class: "btn btn-secondary" %>
+<%= link_to 'back', teams_path, class: "btn btn-secondary" %>

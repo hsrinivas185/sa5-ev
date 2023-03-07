@@ -1,0 +1,7 @@
+<h1><%= @player.first_name%> <%= @player.last_name%> </h1>
+<ul>
+<li>Team: <%= @team.name %> </li>
+<li>Position: <%= @player.position %></li>
+</ul>
+
+<%= link_to 'back', team_players_path(@team), class: 'btn btn-secondary' %>

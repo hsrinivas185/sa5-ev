@@ -16,19 +16,22 @@ memphis = Team.create!(
 Player.create!(
   first_name: 'D.J.',
   last_name: 'Jeffries',
-  position: 'F'
+  position: 'F',
+  team: memphis
 )
 
 Player.create!(
   first_name: 'Jayden',
   last_name: 'Hardaway',
-  position: 'G'
+  position: 'G',
+  team: memphis
 )
 
 Player.create!(
   first_name: 'Alex',
   last_name: 'Lomax',
-  position: 'G'
+  position: 'G',
+  team: memphis
 )
 
 # Duke University
@@ -41,19 +44,22 @@ duke = Team.create!(
 Player.create!(
   first_name: 'Wendell',
   last_name: 'Moore, Jr.',
-  position: 'F'
+  position: 'F',
+  team: duke
 )
 
 Player.create!(
   first_name: 'Jalen',
   last_name: 'Johnson',
-  position: 'F'
+  position: 'F',
+  team: duke
 )
 
 Player.create!(
   first_name: 'DJ',
   last_name: 'Steward',
-  position: 'G'
+  position: 'G',
+  team: duke
 )
 
 # Michigan State University
@@ -66,17 +72,20 @@ msu = Team.create!(
 Player.create!(
   first_name: 'Aaron',
   last_name: 'Henry',
-  position: 'F'
+  position: 'F',
+  team: msu
 )
 
 Player.create!(
   first_name: 'Joshua',
   last_name: 'Langford',
-  position: 'G'
+  position: 'G',
+  team: msu
 )
 
 Player.create!(
   first_name: 'Rocket',
   last_name: 'Watts',
-  position: 'G'
+  position: 'G',
+  team: msu
 )

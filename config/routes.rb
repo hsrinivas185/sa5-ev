@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   # root "articles#index"
 root to: redirect('/teams')
 
+get 'teams/:team_id/players/new', to: 'players#new', as: 'new_team_player'
+delete 'teams/:team_id/players/:id', to: 'players#destroy'
+patch 'teams/:team_id/players/:id', to: 'players#update'
+get 'teams/:team_id/players/:id/edit', to: 'players#edit', as: 'edit_team_player'
+get 'teams/:team_id/players/:id', to: 'players#show', as: 'team_player' 
+post 'teams/:team_id/players', to: 'players#create'
+get 'teams/:team_id/players', to: 'players#index', as: 'team_players'
 get 'teams', to: 'teams#index', as: 'teams'
 post 'teams', to: 'teams#create'
 get 'teams/new', to: 'teams#new', as: 'new_team'
